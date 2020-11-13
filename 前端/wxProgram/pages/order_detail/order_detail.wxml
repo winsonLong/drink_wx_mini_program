@@ -1,0 +1,86 @@
+<!--pages/order_detail/order_detail.wxml-->
+<view class=" weui-search-bar ">
+  <view class="weui-search-bar__form ">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input " placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+      <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="14"></icon>
+      </view>
+    </view>
+    <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <view class="weui-search-bar__text">搜索</view>
+    </label>
+  </view>
+  <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+<view class="weui-cells searchbar-result search_text" wx:if="{{inputVal.length > 0}}" >
+  <view wx:for="{{searchGoods}}"  wx:key="drinkid">
+    <view class="weui-cell searchbar-result result_text" hover-class="weui-cell_active"  >
+      <view class="weui-cell__bd">
+         <image  class="search_pic" src="{{item.picurl}}"></image>
+        <view  class="search_name">{{item.name}}</view>
+        <view class="search_price"  wx:if="{{item.price}}">￥{{item.price}}</view>
+        <view class="search_add addCart" wx:if="{{item.price}}"  data-id="{{item.name}}" bindtap="goToPosition" >
+              <image src="/asset/icon/plus.png"></image>
+        </view>
+      </view>
+   </view>
+  </view>
+</view>
+
+<view class="container">
+
+  <view class="content-container">
+    <scroll-view class="classify-container" scroll-y="true">
+      <view class="classify {{classifySeleted==classify.typeid?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="typeid" data-id="{{classify.typeid}}" bindtap="tapClassify">
+        <view class="name">{{classify.name}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+      <view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="typeid" id="{{classify.typeid}}">
+        <view class="title">{{classify.name}}</view>
+        <view class="goods" wx:for="{{classify.drinkids}}" wx:for-item="id" wx:key="*this">
+          <view wx:for="{{goods}}" wx:for-item="good" wx:key="drinkid">
+            <image wx:if="{{good.drinkid==id}}" class="pic" src="{{good.picurl}}"></image>
+            <view class="name ellipsis" wx:if="{{good.drinkid==id}}">{{good.name}}</view>
+            <view class="price" wx:if="{{good.drinkid==id}}">￥{{good.price}}</view>
+            <view class="addCart" bindtap="tapAddCart" data-id="{{index}}" wx:if="{{good.drinkid==id}}">
+              <image src="/asset/icon/plus.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="blank"></view>
+    </scroll-view>
+  </view>
+  <view class="cart-detail" hidden="{{!showCartDetail||!cart.count}}">
+    <view class="mask" bindtap="hideCartDetail"></view>
+
+    <view class="list cart_position">
+      <view class="item" wx:for="{{cart.list}}" wx:for-index="id" wx:for-item="num" wx:key="id">
+        <view class="name ellipsis">{{goods[id].name}}</view>
+        <view class="total">￥{{goods[id].price*cart.list[id]}}</view>
+        <view class="reduce" data-id="{{id}}" bindtap="tapReduceCart">-</view>
+        <view class="num">{{num}}</view>
+        <view class="add" data-id="{{id}}" bindtap="tapAddCart">+</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="cart cart_position">
+    <view class="data" bindtap="showCartDetail">
+      <view class="icon">
+        <image src="/asset/icon/cart.png"></image>
+        <view class="count">{{cart.count}}</view>
+      </view>
+      <view class="total">￥{{cart.total}}</view>
+    </view>
+    <form bindsubmit="submit" report-submit="true">
+      <!--<view formType="submit" class="submit">去结算</view>-->
+      <button class="yellow {{cart.count?'':'disabled'}}" formType="submit" disabled="{{!cart.count}}">点单</button>
+    </form>
+  </view>
+</view>

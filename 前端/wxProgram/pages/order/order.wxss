@@ -1,0 +1,55 @@
+/* pages/order/order.wxss */
+page{
+  background: #e6e6e6;
+}
+.order_info{
+  border:1px solid #e6e6e6; 
+  border-radius:3px; 
+  box-shadow: 5px 5px 5px #888888;
+  margin: 40rpx auto;
+  width: 85%;
+  height: 300rpx;
+  background-color:white; 
+  text-align: center;
+  color: #8a8a8a;
+  font-size:30rpx; 
+  background-color: #ea9c59
+}
+
+.item{
+  width: 90%;
+  height: 200rpx;
+  margin: 20rpx auto; 
+  border: 1rpx #888888;
+  border-radius:10rpx; 
+  background-color: white
+}
+.total{
+  color: red;
+  font-size: 50rpx;
+  position: relative;
+  top: 120rpx;
+  left: 160rpx;
+}
+.date{
+  position: relative;
+  top: 70rpx;
+  right: 120rpx;
+}
+.content{
+  margin: 20rpx;
+  width: 400rpx;
+  position: absolute;
+  text-align: left;
+}
+
+
+.order_button{
+  width: 85%;
+  margin: 80rpx auto;
+  background-color:  #ee6f1a;
+  color: white;
+  font-size:30rpx; 
+}
+/* .order_button{background-color:#ee6f1a}.order_button:not(.weui-btn_disabled):visited{color:#fff} */
+.order_button:not(.weui-btn_disabled):active{color:#fff;background-color:#f8d390}

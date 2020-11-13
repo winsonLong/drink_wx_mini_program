@@ -1,0 +1,39 @@
+/* pages/home/home.wxss */
+.title{
+  color: red;
+  font-size: 30px;
+}
+
+.order_block{ 
+  height: 150rpx;
+}
+
+.inner_order{
+  height: 70rpx;
+  width: 500rpx;
+  border:4rpx solid #ee6f1a;
+  border-radius: 20rpx;
+  margin: 40rpx auto; 
+  color: #ee6f1a;
+  text-align: center;
+  padding-top:10rpx; 
+}
+.slot1_style{
+  height: 50rpx;
+  width: 50rpx;
+  position: relative;
+  top: 10rpx;
+}
+.slot2_style{
+  font-size: 30rpx;
+  margin-left: 20rpx; 
+  margin-bottom: 20rpx; 
+  color: #707070;
+}
+.last_slot view{
+  border-bottom:0px; 
+}
+.advertise {
+  width: 100%;
+  height: 140rpx;
+}

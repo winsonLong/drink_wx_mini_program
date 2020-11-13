@@ -1,0 +1,11 @@
+/* pages/profile/child-cpn/avartar-cpn/avartar-cpn.wxss */
+.avartar_style {
+  margin: 40rpx auto;
+  text-align: center
+}
+.avartar_style image{
+  margin: 40rpx auto;
+  height: 240rpx;
+  width: 240rpx;
+  border-radius:115rpx; 
+}

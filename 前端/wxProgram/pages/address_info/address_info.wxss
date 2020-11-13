@@ -1,0 +1,29 @@
+/* pages/address_info/address_info.wxss */
+.choose-address{
+   border-bottom: 3rpx solid #bfbfbf;
+}
+
+.tittle_type{
+  display: inline-block;
+  font-weight: bold;
+  color: #8a8a8a;
+  margin-bottom:10rpx; 
+}
+.nav{
+  margin: 60rpx;
+}
+.button_type{
+  background-color: #ed8a27;
+  color: white;
+  
+}
+.button_type:active{
+  background-color: #f8d390;
+}
+.icon{
+  position: absolute;
+  top: 90rpx;
+  right: 50rpx;
+  font-size: 50rpx;
+  color: #bfbfbf;
+}

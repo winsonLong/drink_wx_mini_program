@@ -1,0 +1,6 @@
+<!--components/my-slot/my-slot.wxml-->
+<view class="slot_style">
+<slot name="slot1" class="slot1_style">1</slot>
+<slot name="slot2" class="slot2_style">2</slot>
+<text class="finger">></text>
+</view>

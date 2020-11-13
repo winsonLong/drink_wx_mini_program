@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/order/order",
+    "pages/profile/profile",
+    "pages/order_detail/order_detail",
+    "pages/address_info/address_info"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "DEMO",
+    "backgroundColor": "#e6e6e6",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#ee6f1a",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/asset/tabBar/view.png",
+        "selectedIconPath": "/asset/tabBar/view_selected.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "/asset/tabBar/order.png",
+        "selectedIconPath": "/asset/tabBar/order_selected.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/asset/tabBar/user.png",
+        "selectedIconPath": "/asset/tabBar/user_selected.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置"
+    }
+  },
+  "sitemapLocation": "sitemap42.json"
+}

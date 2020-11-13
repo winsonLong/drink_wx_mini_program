@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "w-wiper": "/components/w-wiper/w-wiper",
+    "my-slot": "/components/my-slot/my-slot",
+    "my-list": "/components/my-list/my-list"
+  }
+}

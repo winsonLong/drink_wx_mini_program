@@ -1,0 +1,15 @@
+/* components/my-slot/my-slot.wxss */
+.finger{
+  color: #f79a5b;
+  float: right;
+  position: relative;
+  top: 10rpx;
+}
+
+.slot_style{
+  margin: 20rpx auto;
+  width: 80%;
+  height: 100rpx;
+  padding-right:50rpx; 
+  border-bottom: 1px solid #e6e6e6;
+}

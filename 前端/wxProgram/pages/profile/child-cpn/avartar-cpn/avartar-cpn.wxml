@@ -1,0 +1,4 @@
+<!--pages/profile/child-cpn/avartar-cpn/avartar-cpn.wxml-->
+<view class="avartar_style">
+  <image src="{{avartar}}"></image>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "avartar-cpn": "./child-cpn/avartar-cpn/avartar-cpn",
+    "my-list": "/components/my-list/my-list"
+  }
+}

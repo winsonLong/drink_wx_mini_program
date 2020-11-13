@@ -1,0 +1,13 @@
+/* pages/profile/profile.wxss */
+page{
+  background-color:  #e6e6e6;
+}
+.nickName{
+  text-align: center;
+  position: relative;
+  top: -60rpx;
+}
+.menu{
+  margin: 0 auto;
+  width: 90%;
+}

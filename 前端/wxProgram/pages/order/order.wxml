@@ -1,0 +1,13 @@
+<!--pages/order/order.wxml-->
+<!-- 订单信息-->
+<scroll-view class="order_info" scroll-y>
+<view wx:if="{{orders.ordersid}}"> 暂无订单信息</view>
+<view wx:for="{{orders}}" class="item" wx:key="{{orderid}}">
+  <view class="content">{{item.content}}</view>
+  <view class="total">￥{{item.total}}</view>
+  <view class="date">{{item.date}}</view>
+</view>
+</scroll-view>
+
+<!--点单按钮  -->
+<button class="order_button" bind:tap="gotoOrder">开 始 点 单</button>

@@ -1,0 +1,25 @@
+<!--pages/address_info/address_info.wxml-->
+<form bindsubmit="submit">
+<view class="nav">
+<view class="tittle_type">地址</view>
+<view class='address' bindtap='onChangeAddress'>
+  <input class='choose-address' placeholder='请选取地点' value='{{chooseAddress}}' name="address"></input>
+  <text class="icon">></text>
+</view>
+</view>
+
+<view class="nav">
+<view class="tittle_type">门牌号</view> 
+<input class='choose-address' placeholder='例：5号楼302室' value='{{homeNumber}}' name="homeNumber"></input>
+</view>
+
+<view class="nav">
+<view class="tittle_type">电话 </view> 
+<input class='choose-address' placeholder='手机号码' value='{{phoneNumber}}' name="phone"></input>
+</view>
+
+
+<view>
+<button form-type="submit"  class="button_type">保存</button>
+</view>
+</form>

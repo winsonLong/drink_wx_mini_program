@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<!-- 展示轮播图 -->
+<w-wiper />
+
+<!-- 点单 -->
+<view class="order_block">
+  <view class="inner_order" bind:tap="gotoOrder">自 助 点 单</view>
+</view>
+
+<!-- 菜单栏 -->
+<view>
+  <my-slot>
+    <image src="/asset/tabBar/time.png" slot="slot1" class="slot1_style"></image>
+    <text slot="slot2" class="slot2_style">限时拼团</text>
+  </my-slot>
+  <my-slot>
+    <image src="/asset/tabBar/share.png" slot="slot1" class="slot1_style"></image>
+    <text slot="slot2" class="slot2_style">分享链接</text>
+  </my-slot>
+  <my-slot class="last_slot">
+    <image src="/asset/tabBar/partner.png" slot="slot1" class="slot1_style"></image>
+    <text slot="slot2" class="slot2_style">请TA喝一杯</text>
+  </my-slot>
+</view>
+
+<!-- 底部广告 -->
+<view>
+  <image src="/asset/tabBar/ad.png" class="advertise"></image>
+</view>

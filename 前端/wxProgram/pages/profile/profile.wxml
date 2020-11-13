@@ -1,0 +1,11 @@
+<!--pages/profile/profile.wxml-->
+<!-- 头像 -->
+<avartar-cpn avartar="{{image}}" />
+<!-- 昵称 -->
+<view class="nickName">
+  <text >{{nickName}}</text>
+</view>
+<!-- 菜单栏 -->
+<view class="menu">
+  <my-list />
+</view>
